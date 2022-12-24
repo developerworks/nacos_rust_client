@@ -1,0 +1,8 @@
+
+nacos:
+  server-addr: 127.0.0.1:8848
+  namespace: "442b56fa-42ce-48b6-a457-2a547465d812"
+  group: DEFAULT_GROUP
+  data-id: application-{}.yaml
+log:
+  path: /Users/zhouyou/2022/languages/rust/nacos_rust_client/logs

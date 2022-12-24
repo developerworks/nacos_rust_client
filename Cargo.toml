@@ -1,0 +1,23 @@
+[package]
+name = "nacos_rust_client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+anyhow = "1.0.68"
+nacos-sdk = "0.2.2"
+schemars = "0.8.11"
+serde = { version = "1.0.151", features = ["derive"] }
+serde_json = "1.0.91"
+serde_yaml = "0.9.16"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["json"] }
+actix-web = "4.2.1"
+lombok = "0.3.3"
+tracing-appender = "0.2.2"
+error-chain = "0.12.4"
+futures = "0.3.25"
+lazy_static = "1.4.0"

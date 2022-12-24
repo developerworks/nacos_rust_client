@@ -1,0 +1,14 @@
+application:
+  hosts: 
+    - 127.0.0.1
+    - 192.168.0.103
+  hosts-v6:
+    - "[::1]:9000"
+  port: 8888
+  shutdown-timeout: 30
+  workers: 10
+  log: 
+    level: DEBUG
+    path: /Users/zhouyou/2022/languages/rust/nacos_rust_client/logs
+    rotation: daily
+    file-name-prefix: server.log
