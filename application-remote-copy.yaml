@@ -1,0 +1,16 @@
+application:
+  hosts:
+  - 127.0.0.1
+  - 192.168.0.103
+  - 10.20.0.6
+  hosts-v6: 
+    - "[::1]:9000"
+  port:
+    8888
+  shutdown-timeout: 30
+  workers: 4
+  log:
+    level: DEBUG
+    path: /tmp/logs
+    rotation: daily
+    file-name-prefix: nacos-rust-client.log

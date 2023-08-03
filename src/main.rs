@@ -15,6 +15,7 @@ use tracing_subscriber::{
     util::SubscriberInitExt,
     Registry,
 };
+mod hello_controller;
 // static mut reload_handle: Option<Handle<LevelFilter, Registry>> = None;
 
 error_chain! {
@@ -95,7 +96,7 @@ async fn main() -> Result<()> {
     // ------------------
     let mut servers = Vec::with_capacity(2);
     for i in 0..ac.clone().application.hosts.len() {
-        let server = HttpServer::new(App::new)
+        let server = HttpServer::new(|| App::new().configure(hello_controller::init))
             .shutdown_timeout(30)
             .workers(ac.clone().application.workers)
             .bind((

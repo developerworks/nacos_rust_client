@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use skywalking::trace::tracer::Tracer;
 use std::fmt::Display;
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -28,7 +29,7 @@ pub struct Profiles {
 #[serde(rename_all = "kebab-case")]
 pub struct Application {
     pub shutdown_timeout: u64,
-    pub workers: usize,    
+    pub workers: usize,
     pub hosts: Vec<String>,
     pub hosts_v6: Vec<String>,
     pub port: u16,
@@ -66,4 +67,9 @@ pub enum Rotation {
     Hourly,
     Daily,
     Never,
+}
+
+#[derive(Clone)]
+pub struct AppState {
+    tracer: Tracer,
 }

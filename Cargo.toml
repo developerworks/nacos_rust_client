@@ -21,3 +21,7 @@ tracing-appender = "0.2.2"
 error-chain = "0.12.4"
 futures = "0.3.25"
 lazy_static = "1.4.0"
+skywalking = "0.4.0"
+# opentelemetry = { version = "0.18.0", default-features = false, features = ["trace"] }
+opentelemetry = { version = "0.18.0", features = ["rt-async-std"] }
+opentelemetry-otlp = { version = "*", features = ["grpc-sys"] }

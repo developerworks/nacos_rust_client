@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "application": {
+                    "$ref": "#/definitions/Application"
+                }
+            },
+            "required": [
+                "application"
+            ],
+            "title": "Welcome9"
+        },
+        "Application": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "hosts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "hosts-v6": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "port": {
+                    "type": "integer"
+                },
+                "shutdown-timeout": {
+                    "type": "integer"
+                },
+                "workers": {
+                    "type": "integer"
+                },
+                "log": {
+                    "$ref": "#/definitions/Log"
+                }
+            },
+            "required": [
+                "hosts",
+                "hosts-v6",
+                "log",
+                "port",
+                "shutdown-timeout",
+                "workers"
+            ],
+            "title": "Application"
+        },
+        "Log": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "level": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "rotation": {
+                    "type": "string"
+                },
+                "file-name-prefix": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "file-name-prefix",
+                "level",
+                "path",
+                "rotation"
+            ],
+            "title": "Log"
+        }
+    }
+}

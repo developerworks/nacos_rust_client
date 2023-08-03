@@ -350,3 +350,8 @@ pub fn config_tracing(reload_handle: &Handle<LevelFilter, Registry>, log: Log) {
     };
     _ = reload_handle.modify(|f| *f = filter);
 }
+
+
+// 提供注册功能
+// pub register() {
+// }
